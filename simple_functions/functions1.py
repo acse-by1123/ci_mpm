@@ -1,6 +1,6 @@
 from functools import cache
 
-__all__ = ['my_sum', "factorial"]
+__all__ = ['my_sum', "my_factorial"]
 
 
 def my_sum(iterable):
@@ -11,5 +11,5 @@ def my_sum(iterable):
 
 
 @cache
-def factorial(n):
-    return n * factorial(n-1) if n else 1
+def my_factorial(n):
+    return n * my_factorial(n-1) if n else 1
