@@ -1,5 +1,4 @@
 from numpy import sqrt
-from simple_functions.functions1 import factorial
 from functools import cache
 
 __all__ = ['my_sum', "my_factorial", "pi"]
@@ -26,5 +25,5 @@ def pi(terms=1):
 
 @cache
 def rsum(n):
-    t = factorial(4*n)*(1103+26390*n)/(factorial(n)**4*396**(4*n))
+    t = my_factorial(4*n)*(1103+26390*n)/(my_factorial(n)**4*396**(4*n))
     return t + rsum(n-1) if n else t
