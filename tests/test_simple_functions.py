@@ -1,7 +1,7 @@
 import pytest
 
 from simple_functions import my_sum
-from simple_functions import factorial
+from simple_functions import my_factorial
 
 
 class TestSimpleFunctions(object):
@@ -23,5 +23,5 @@ class TestSimpleFunctions(object):
     ])
     def test_factorial(self, number, expected):
         '''Test our factorial function'''
-        answer = factorial(number)
+        answer = my_factorial(number)
         assert answer == expected
