@@ -1,7 +1,7 @@
 from functools import cache
-from numpy import sqrt
+import numpy as np
 
-__all__ = ['my_sum', 'factorial', 'pi']
+__all__ = ['my_sum', 'factorial', 'pi', 'sin']
 
 
 def my_sum(iterable):
@@ -17,10 +17,14 @@ def factorial(n):
 
 
 def pi(terms=1):
-    return 1./(2.*sqrt(2.)/9801.*rsum(terms))
+    return 1./(2.*np.sqrt(2.)/9801.*rsum(terms))
 
 
 @cache
 def rsum(n):
     t = factorial(4*n)*(1103+26390*n)/(factorial(n)**4*396**(4*n))
     return t + rsum(n-1) if n else t
+
+
+def sin(x):
+    return np.sin(x)
